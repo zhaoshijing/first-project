@@ -1,0 +1,16 @@
+<nz-breadcrumb>
+    <nz-breadcrumb-item>
+      <a [routerLink]="['..']" style="color:#00abff;">报表统计</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      {{id}}
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+<div nz-row style="padding-top:20px;">
+  <div nz-col nzSpan="12" class="chart-wrapper">
+      <div echarts [options]="pieOption" [merge]="updateOptions" class="demo-chart"></div>
+  </div>
+  <div nz-col nzSpan="12" class="chart-wrapper">
+      <div echarts [options]="barOption" [merge]="updateOptions1" class="demo-chart"></div>
+  </div>
+</div>

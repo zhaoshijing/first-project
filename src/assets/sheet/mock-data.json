@@ -1,0 +1,22 @@
+{
+  "responseData": [
+    {
+      "key": "1",
+      "total": 100,
+      "lowPower": 24,
+      "liquid": 26,
+      "move": 30,
+      "startNum": 5,
+      "lifeWarning": 20
+    },
+    {
+      "key": "2",
+      "total": 50,
+      "lowPower": 10,
+      "liquid": 26,
+      "move": 7,
+      "startNum": 8,
+      "lifeWarning": 7
+    }
+  ]
+}

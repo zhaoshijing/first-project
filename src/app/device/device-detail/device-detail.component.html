@@ -1,0 +1,18 @@
+<nz-breadcrumb>
+  <nz-breadcrumb-item>
+    <a [routerLink]="['..']" style="color:#00abff;">设备管理</a>
+  </nz-breadcrumb-item>
+  <nz-breadcrumb-item>
+    {{id}}
+  </nz-breadcrumb-item>
+</nz-breadcrumb>
+<div nz-row class="detail-container">
+  <ng-container *ngFor="let key of keys">
+      <div nz-col nzSpan="8" >
+          <nz-form-item class="form-item-class">
+            <nz-form-label [nzSpan]="6">{{key}}</nz-form-label>
+            <nz-form-control [nzSpan]="14">{{targetDevice[key]}}</nz-form-control>
+          </nz-form-item>
+        </div>
+  </ng-container>
+</div>

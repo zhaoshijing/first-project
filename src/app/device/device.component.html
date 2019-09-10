@@ -1,0 +1,38 @@
+<button nz-button class="add-button-class" (click)="registerDevice($event)"><i nz-icon nzType="plus"></i>注册设备</button>
+<nz-table #basicTable [nzData]="listOfData" nzBordered>
+  <thead>
+    <tr>
+      <th [nzAlign]="'center'">设备编号</th>
+      <th>设备名称</th>
+      <th>设备类型</th>
+      <th>设备状态</th>
+      <th [nzAlign]="'center'">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td [nzAlign]="'center'"><a (click)="gotoDetail($event, data.key)">{{ data.key }}</a></td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.type }}</td>
+      <td>
+        <span class="circle-icon-status" [ngClass]="classMap[data.status]"></span>{{data.status}}
+      </td>
+      <td [nzAlign]="'center'">
+          <nz-dropdown>
+              <button nz-button nz-dropdown><span>编辑</span><i nz-icon type="down"></i></button>
+              <ul nz-menu>
+                <li nz-menu-item>
+                  <a>删除</a>
+                </li>
+                <li nz-menu-item>
+                  <a>重启</a>
+                </li>
+                <li nz-menu-item>
+                  <a>还原</a>
+                </li>
+              </ul>
+            </nz-dropdown>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

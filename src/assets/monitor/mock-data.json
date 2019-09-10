@@ -1,0 +1,23 @@
+{
+  "responseData": [
+    {
+      "key": "1",
+      "position": "西安",
+      "type": "主机",
+      "status": "on",
+      "GPS": "22,33",
+      "title": "快",
+      "powerVal": "220V"
+    },
+    {
+      "key": "2",
+      "position": "西安",
+      "name": "Jim Green",
+      "type": "虚拟机",
+      "status": "error",
+      "GPS": "22,33",
+      "title": "慢",
+      "powerVal": "220V"
+    }
+  ]
+}

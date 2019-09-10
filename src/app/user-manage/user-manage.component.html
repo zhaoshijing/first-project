@@ -1,0 +1,36 @@
+<button nz-button class="add-button-class" (click)="addUser($event)"><i nz-icon nzType="plus"></i>添加用户</button>
+<nz-table #basicTable [nzData]="listOfData" nzBordered>
+  <thead>
+    <tr>
+      <th>用户编号</th>
+      <th>用户姓名</th>
+      <th>用户角色</th>
+      <th>用户组</th>
+      <th [nzAlign]="'center'">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.key }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.role }}</td>
+      <td>{{data.group}}</td>
+      <td [nzAlign]="'center'">
+          <nz-dropdown>
+              <button nz-button nz-dropdown><span>编辑</span><i nz-icon type="down"></i></button>
+              <ul nz-menu>
+                <li nz-menu-item>
+                  <a>删除</a>
+                </li>
+                <li nz-menu-item>
+                  <a>重启</a>
+                </li>
+                <li nz-menu-item>
+                  <a>还原</a>
+                </li>
+              </ul>
+            </nz-dropdown>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

@@ -1,0 +1,22 @@
+{
+  "responseData": [
+    {
+      "key": "1",
+      "name": "John Brown",
+      "type": "主机",
+      "status": "on"
+    },
+    {
+      "key": "2",
+      "name": "Jim Green",
+      "type": "虚拟机",
+      "status": "error"
+    },
+    {
+      "key": "3",
+      "name": "Joe Black",
+      "type": "路由器",
+      "status": "off"
+    }
+  ]
+}

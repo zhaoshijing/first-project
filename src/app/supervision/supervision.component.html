@@ -1,0 +1,16 @@
+<div nz-row>
+  <div nz-col [nzOffset]="6" [nzSpan]="12">
+    <div nz-row>
+        <ng-container *ngFor="let item of supervisonList">
+            <div nz-col [nzSpan]="8">
+              <div class="supervision-item">
+                  <span class="icon-position">
+                      <i nz-icon [nzType]="item.iconType"></i>
+                  </span>
+                  <span class="item-des">{{item.des}}</span>
+              </div>
+            </div>
+        </ng-container>
+    </div>
+  </div>
+</div>

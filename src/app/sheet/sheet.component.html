@@ -1,0 +1,41 @@
+<nz-table #basicTable [nzData]="listOfData" nzBordered>
+  <thead>
+    <tr>
+      <th [nzAlign]="'center'">设备编号</th>
+      <th>总告警次数</th>
+      <th>低电压告警</th>
+      <th>液位告警</th>
+      <th>移动告警</th>
+      <th>电机启动次数</th>
+      <th>电池寿命告警</th>
+      <th [nzAlign]="'center'">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+        <td [nzAlign]="'center'"><a (click)="gotoDetail($event, data.key)">{{ data.key }}</a></td>
+        <td>{{ data.total }}</td>
+        <td>{{ data.lowPower }}</td>
+        <td>{{ data.liquid }}</td>
+        <td>{{ data.move }}</td>
+        <td>{{ data.startNum }}</td>
+        <td>{{ data.lifeWarning }}</td>
+        <td [nzAlign]="'center'">
+            <nz-dropdown>
+                <button nz-button nz-dropdown><span>编辑</span><i nz-icon type="down"></i></button>
+                <ul nz-menu>
+                  <li nz-menu-item>
+                    <a>删除</a>
+                  </li>
+                  <li nz-menu-item>
+                    <a>重启</a>
+                  </li>
+                  <li nz-menu-item>
+                    <a>还原</a>
+                  </li>
+                </ul>
+              </nz-dropdown>
+        </td>
+    </tr>
+  </tbody>
+</nz-table>

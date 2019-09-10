@@ -1,0 +1,22 @@
+{
+  "responseData": [
+    {
+      "key": "1",
+      "name": "John Brown",
+      "role": "admin",
+      "group": "cloud"
+    },
+    {
+      "key": "2",
+      "name": "Jim Green",
+      "role": "pro-admin",
+      "group": "project"
+    },
+    {
+      "key": "3",
+      "name": "Joe Black",
+      "role": "fix-admin",
+      "group": "cloud"
+    }
+  ]
+}

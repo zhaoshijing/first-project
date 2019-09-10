@@ -1,0 +1,41 @@
+<nz-table #basicTable [nzData]="listOfData" nzBordered>
+  <thead>
+    <tr>
+      <th>设备编号</th>
+      <th>设备地址</th>
+      <th>设备类型</th>
+      <th>设备状态</th>
+      <th>移动提示</th>
+      <th>设备电压</th>
+      <th>GPS</th>
+      <th [nzAlign]="'center'">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.key }}</td>
+      <td>{{ data.position }}</td>
+      <td>{{ data.type }}</td>
+      <td> <span class="circle-icon-status" [ngClass]="classMap[data.status]"></span>{{ data.status }}</td>
+      <td>{{ data.title }}</td>
+      <td>{{ data.powerVal }}</td>
+      <td>{{ data.GPS }}</td>
+      <td [nzAlign]="'center'">
+          <nz-dropdown>
+              <button nz-button nz-dropdown><span>编辑</span><i nz-icon type="down"></i></button>
+              <ul nz-menu>
+                <li nz-menu-item>
+                  <a>删除</a>
+                </li>
+                <li nz-menu-item>
+                  <a>重启</a>
+                </li>
+                <li nz-menu-item>
+                  <a>还原</a>
+                </li>
+              </ul>
+            </nz-dropdown>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

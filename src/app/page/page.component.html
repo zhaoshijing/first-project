@@ -1,0 +1,20 @@
+<nz-layout class="self-nz-layout">
+  <nz-header style="padding: 0">
+    <div class="logo">Logo</div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item routerLink="./" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">首页</li>
+      <li nz-menu-item routerLink="./monitor" routerLinkActive="active">告警</li>
+      <li nz-menu-item routerLink="./sheet" routerLinkActive="active">统计</li>
+      <li nz-menu-item routerLink="./supervison" routerLinkActive="active">监管</li>
+      <li nz-menu-item routerLink="./device" routerLinkActive="active">设备管理</li>
+      <li nz-menu-item routerLink="./user-manage" routerLinkActive="active">用户管理</li>
+      <li nz-menu-item routerLink="./about" routerLinkActive="active">关于</li>
+      <li nz-menu-item routerLink="/login" style="float: right">退出登录</li>
+    </ul>
+  </nz-header>
+  <nz-content style="padding: 0">
+    <div class="inner-content"><router-outlet></router-outlet></div>
+  </nz-content>
+  <nz-footer>版权所有， @2019-2020.all</nz-footer>
+</nz-layout>
